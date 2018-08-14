@@ -15,6 +15,7 @@ a {
 
 header {
     position: fixed;
+    z-index: 1;
     height: 60px;
     width: 100%;
     opacity: 0.9;
@@ -52,6 +53,11 @@ header {
 .nav-top::before {
     content: "トップ";
     background-color: rgb(0, 220, 220);
+}
+
+.nav-about::before {
+    content: "私について";
+    background-color: #ba00f3;
 }
 
 .nav-app::before {
@@ -133,16 +139,31 @@ h4 {
     margin-bottom: 10px;
 }
 
+.content-container {
+    position: relative;
+    overflow: hidden;
+}
+
 .content-box {
     float: left;
     width: 50%;
 }
 
-.content-container {
-    overflow: hidden;
+.content-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+}
+
+.description {
+    text-align: left;
 }
 
 .content p {
     margin: 0;
-    margin-bottom: 20px;
+}
+
+iframe {
+    padding: 20px;
 }
