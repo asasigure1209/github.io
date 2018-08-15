@@ -135,7 +135,7 @@ h3 {
 
 h4 {
     font-size: 24px;
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -151,9 +151,33 @@ h4 {
 
 .content-text {
     position: absolute;
+    padding-right: 20px;
+    padding-left: 20px;
     top: 50%;
     left: 50%;
     transform: translateY(-50%);
+}
+
+.slide {
+    position: relative;
+    min-height: 533px;
+}
+
+.slide img {
+    position: absolute;
+    left:50%;
+    top:0;
+    transform: translateX(-50%);
+}
+
+.previous {
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+.next {
+    padding: 30px;
+    padding-bottom: 0;
 }
 
 .description {

@@ -6,6 +6,7 @@
   <title>asasigure</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
   <header>
@@ -31,24 +32,29 @@
     </div>
     <div class="content" id="app" name="app">
       <h2>Application</h2>
-			<h3>星空キャンバス</h3>
-			<div class="content-container">
-				<div class="content-box">
-          <img src="./hoshizoraCanvas.png" class="app-img">
-        </div>
-      	<div class="content-box content-text">
-        	<p class="description">
-            自分だけの星座を作ることのできるAndroidアプリです。
-            星空の鑑賞や星座の解説、星空スポットの紹介などのコンテンツがあります。
-            鑑賞モードでは星の表示数を変えることができ、自分の街の星空を再現可能です。
-            また、星の回転スピードを変えることも可能です。
-        	</p>
-        	<h4>開発環境</h4>
-        	<p>Unity C#</p>
-        	<h4>備考</h4>
-        	<p>ぐんまプログラミングアワード2018ファイナル出場</p>
-        </div>
-			</div>
+		<h3>星空キャンバス</h3>
+		<div class="content-container">
+		    <div class="content-box">
+                <div class="slide">
+                    <img src="./hoshizora-menu.png" class="app-img">
+                    <img src="./hoshizora-tips.png" class="app-img">
+                </div>
+                <a class="fa fa-chevron-left previous"></a>
+                <a class="fa fa-chevron-right next"></a>
+            </div>
+      	    <div class="content-box content-text">
+        	    <p class="description">
+                    自分だけの星座を作ることのできるAndroidアプリです。
+                    星空の鑑賞や星座の解説、星空スポットの紹介などのコンテンツがあります。
+                    鑑賞モードでは星の表示数を変えることができ、自分の街の星空を再現可能です。
+                    また、星の回転スピードを変えることも可能です。
+        	    </p>
+        	    <h4>開発環境</h4>
+        	    <p>Unity C#</p>
+        	    <h4>備考</h4>
+        	    <p>ぐんまプログラミングアワード2018ファイナル出場</p>
+            </div>
+		</div>
     </div>
     <div class="content" id="design" name="desing">
       <h2>Design</h2>
@@ -63,5 +69,6 @@
       <p>Blender</p>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
