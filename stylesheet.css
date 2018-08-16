@@ -11,6 +11,7 @@ body {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 header {
@@ -158,26 +159,34 @@ h4 {
     transform: translateY(-50%);
 }
 
-.slide {
+#slide {
     position: relative;
     min-height: 533px;
 }
 
-.slide img {
+#slide img {
     position: absolute;
     left:50%;
     top:0;
     transform: translateX(-50%);
 }
 
-.previous {
+#previous {
     padding: 30px;
     padding-bottom: 0;
 }
 
-.next {
+#previous:hover {
+    opacity: 0.3;
+}
+
+#next {
     padding: 30px;
     padding-bottom: 0;
+}
+
+#next:hover {
+    opacity: 0.3;
 }
 
 .description {

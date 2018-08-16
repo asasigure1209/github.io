@@ -1,21 +1,21 @@
 $(() => {
     let page = 0;
-    let lastPage = parseInt($(".slide img").length - 1);
+    let lastPage = parseInt($("#slide img").length - 1);
 
     //imgの非表示
-    $(".slide img").css("display","none");
+    $("#slide img").css("display","none");
     
     //imgの表示
-    $(".slide img").eq(page).css("display","block");
+    $("#slide img").eq(page).css("display","block");
 
     function changePage() {
-        $(".slide img").fadeOut(1000);
-        $(".slide img").eq(page).fadeIn(1000);
+        $("#slide img").fadeOut(1000);
+        $("#slide img").eq(page).fadeIn(1000);
     };
-
-    let Timer;
-    function startTimer() {
-        Timer = setInterval(function() {
+    
+    /*オプションを足す場合はここへ記載*/
+    $("#previous").click(function() {
+        //タイマー停止＆スタート（クリックした時点から～秒とする為）
             if (page === lastPage) {
                 page = 0;
                 changePage();
@@ -23,16 +23,17 @@ $(() => {
                 page++;
                 changePage();
             };
-        }, 3000);
-    };
-    //（７）～秒間隔でイメージ切換の停止設定
-    function stopTimer() {
-        clearInterval(Timer);
-    };
-    
-    //（８）タイマースタート
-    startTimer();
-    
-    /*オプションを足す場合はここへ記載*/
-    
     });
+   
+   //「戻る」をクリック
+    $("#next").click(function() {
+        //タイマー停止＆スタート（クリックした時点から～秒とする為）
+        if(page === 0) {
+            page = lastPage;
+            changePage();
+        } else {
+            page--;
+            changePage();
+        };
+    });
+});
